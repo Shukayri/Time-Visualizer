@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Days" representedClassName="Days" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="day" optional="YES" attributeType="String"/>
+        <relationship name="inWeek" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week"/>
+    </entity>
+    <entity name="Times" representedClassName="Times" syncable="YES" codeGenerationType="class">
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+        <relationship name="inDay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Days"/>
+    </entity>
+    <entity name="Week" representedClassName="Week" syncable="YES" codeGenerationType="class">
+        <attribute name="weekNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Times" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Week" positionX="-54" positionY="-9" width="128" height="44"/>
+        <element name="Days" positionX="-36" positionY="9" width="128" height="74"/>
+    </elements>
+</model>
